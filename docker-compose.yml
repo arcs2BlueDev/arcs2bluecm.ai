@@ -1,7 +1,7 @@
 services:
   paperless-ai:
-    image: clusterzx/paperless-ai
-    container_name: paperless-ai
+    image: arcs2bluedev/arcs2bluecm.ai
+    container_name: arcs2bluecm.ai
     network_mode: bridge
     restart: unless-stopped
     cap_drop:
@@ -12,7 +12,7 @@ services:
       - PUID=1000
       - PGID=1000
       - PAPERLESS_AI_PORT=${PAPERLESS_AI_PORT:-3000}
-      - RAG_SERVICE_URL=http://localhost:8000
+      - RAG_SERVICE_URL=http://192.168.68.118:8000
       - RAG_SERVICE_ENABLED=true
     ports:
       - "3000:${PAPERLESS_AI_PORT:-3000}"
