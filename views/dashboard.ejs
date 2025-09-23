@@ -23,7 +23,7 @@
         <aside class="sidebar">
             <div class="sidebar-header">
                     <img src="/favicon.ico" class="no-invert" alt="Paperless AI Logo" style="height: 60px;">
-                <h1 class="brand-title">Paperless-AI<small style="display: block;"><%= version %></small></h1>
+                <h1 class="brand-title">Paperless-AI<small style="display: block;"><arcs2Blue></small></h1>
             </div>
 
             <nav class="sidebar-nav">
@@ -464,7 +464,7 @@
         });
         async function checkForUpdates() {
             try {
-                const currentVersion = '<%= version %>'.trim();
+                const currentVersion = '<arcs2Blue>'.trim();
                 if (!currentVersion) return;
 
                 const response = await fetch('https://api.github.com/repos/clusterzx/paperless-ai/releases/latest');
